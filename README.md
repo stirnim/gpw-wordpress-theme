@@ -2,6 +2,10 @@
 
 ## Installation
 
+1. Download or clone this repository.
+2. Upload the theme folder to your WordPress installation under `wp-content/themes/`.
+3. Activate the theme via `Appearance > Themes`.
+
 This WordPress theme requires the following WordPress plugins:
 
 - [GenerateBlocks](https://wordpress.org/plugins/generateblocks/)
@@ -88,7 +92,58 @@ Translate menus via:
 
 ## Development
 
-### Create Patterns
+### Theme Structure
+
+Below is an overview of the theme's file structure and its purpose.
+
+#### File Structure
+
+##### Root-Level Files
+- **`functions.php`**
+  - Contains PHP functions to add theme functionality, such as enqueuing scripts/styles, registering features, and adding hooks/filters.
+
+- **`style.css`**
+  - The primary stylesheet and metadata file for the theme. This is required for the theme to function in WordPress.
+
+- **`content-page.php`**
+  - Template file for displaying individual pages with custom layout and dynamic content.
+
+- **`footer.php`**
+  - Defines the footer section, including widgets, copyright text, and closing HTML tags.
+
+- **`screenshot.png`**
+  - Preview image of the theme, displayed in the WordPress admin under Appearance > Themes.
+
+##### Directories
+
+- **`inc/`**
+  - Contains modular PHP files to organize and structure the theme functionality:
+  - **`structure/`**
+    - Contains files for structural elements of the theme.
+    - **`header.php`**: Defines the layout and functionality of the header, including the navigation menu and logo.
+
+- **`patterns/`**
+  - Contains Gutenberg block patterns as JSON files for reusable layouts
+
+- **`css/`**
+  - Contains custom stylesheets for the theme:
+  - **`editor-style.css`**: Styles for the WordPress block editor, ensuring consistency with the front-end design.
+
+- **`images/`**
+  - Holds theme-specific images, such as logos and placeholders.
+
+- **`js/`**
+  - Contains JavaScript files for theme functionality:
+  - **`scroll-menu.js`**: Implements scroll-based menu features, such as sticky headers or smooth navigation.
+
+- **`fonts/`**
+  - Stores custom font files used within the theme.
+
+
+
+### Customization
+
+#### Create Patterns
 
 Use the following pattern template when creating a new pattern
 
