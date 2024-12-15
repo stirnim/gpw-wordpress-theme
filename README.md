@@ -71,3 +71,34 @@ Translate menus via:
 - **Navigation Path:** `Appearance > Menus`
 
 ---
+
+## Development
+
+### Create Patterns
+
+Use the following pattern template when creating a new pattern
+
+```
+{
+  "__file": "wp_block",
+  "title": "GPW Pattern Name",
+  "content":"<!-- PATTERN CONTENT  -->",
+  "syncStatus": "unsynced"
+}
+```
+
+Open `python3` and type `import json`, then use the following code to create a python dictionary from this pattern:
+```
+rawpattern = '''<PASTE RAW PATTERN>'''
+pattern = json.loads(rawpattern)
+```
+
+Now, copy any Gutenberg Block Pattern code you would like to have as a pattern and print the pattern in a pretty-printed JSON:
+```
+data = '''<PASTE GUTENBERG BLOCK>'''
+pattern["content"] = data
+print(json.dumps(pattern, separators=(',', ':'),indent=4))
+```
+
+Store the printed output in a new pattern file e.g. `gpw-pattern-name.json` and move it to the pattern directory.
+
