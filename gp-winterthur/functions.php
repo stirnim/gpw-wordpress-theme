@@ -91,6 +91,16 @@ class Header_Mobile_Menu_Walker extends Walker_Nav_Menu {
 }
 
 
+/* SETUP GUTENBERG BLOCK EDITOR STYLES */
+function gp_winterthur_setup_theme_support() {
+    // Add support for editor styles
+    add_theme_support( 'editor-styles' );
+
+    // Specify the path to the editor stylesheet
+    add_editor_style( 'css/editor-style.css' );
+}
+add_action( 'after_setup_theme', 'gp_winterthur_setup_theme_support' );
+
 
 /* FOOTER MENU */
 function register_footer_menu() {
