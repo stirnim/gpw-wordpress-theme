@@ -1,0 +1,6 @@
+{
+  "__file": "wp_block",
+  "title": "GPW Map",
+  "content": "<!-- wp:generateblocks/image {\"uniqueId\":\"9117ab23\",\"mediaId\":39,\"sizeSlug\":\"full\",\"width\":\"100%\",\"blockVersion\":2,\"dynamicSource\":\"post-type\",\"className\":\"map-image\"} -->\n<figure class=\"gb-block-image gb-block-image-9117ab23\"><a href=\"https://map.gp-winterthur.ch/?goto=10meilen\"><img class=\"gb-image gb-image-9117ab23 map-image\" src=\"https://test.gp-winterthur.ch/wordpress/wp-content/uploads/2024/11/map_strecke_10m.png\" alt=\"\" title=\"map_strecke_10m\"/></a></figure>\n<!-- /wp:generateblocks/image -->",
+  "syncStatus": "unsynced"
+}

@@ -1,0 +1,6 @@
+{
+  "__file": "wp_block",
+  "title": "GPW Teaser",
+  "content": "<!-- wp:generateblocks/container {\"uniqueId\":\"495c76f9\",\"isDynamic\":true,\"blockVersion\":4,\"className\":\"teaser-image\",\"metadata\":{\"categories\":[\"gp-winterthur-blocks\"],\"patternName\":\"core/block/345\",\"name\":\"Teaser\"}} -->\n<!-- wp:image {\"id\":16,\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"https://test.gp-winterthur.ch/wordpress/wp-content/uploads/2024/11/runners.webp\" alt=\"\" class=\"wp-image-16\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:generateblocks/container {\"uniqueId\":\"f05c56f8\",\"isDynamic\":true,\"blockVersion\":4,\"className\":\"logo\"} -->\n<!-- wp:image {\"id\":28,\"scale\":\"cover\",\"sizeSlug\":\"full\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-full\"><img src=\"https://test.gp-winterthur.ch/wordpress/wp-content/uploads/2024/11/gpw_logo_lime.svg\" alt=\"\" class=\"wp-image-28\" style=\"object-fit:cover\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:paragraph {\"className\":\"date\"} -->\n<p class=\"date\">25. Mai 2025</p>\n<!-- /wp:paragraph -->\n<!-- /wp:generateblocks/container -->\n<!-- /wp:generateblocks/container -->",
+  "syncStatus": "unsynced"
+}

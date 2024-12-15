@@ -1,0 +1,6 @@
+{
+  "__file": "wp_block",
+  "title": "GPW Button",
+  "content":"<!-- wp:generateblocks/button {\"uniqueId\":\"884f3f04\",\"hasUrl\":true,\"blockVersion\":4,\"display\":\"inline-block\",\"typography\":{\"textAlign\":\"center\"},\"spacing\":{\"paddingTop\":\"\",\"paddingRight\":\"\",\"paddingBottom\":\"\",\"paddingLeft\":\"\"},\"backgroundColor\":\"#0366d6\",\"backgroundColorHover\":\"#222222\",\"textColor\":\"#ffffff\",\"textColorHover\":\"#ffffff\",\"className\":\"button-round\"} -->\n<a class=\"gb-button gb-button-884f3f04 gb-button-text button-round\" href=\"#\">Button</a>\n<!-- /wp:generateblocks/button -->",
+  "syncStatus": "unsynced"
+}
