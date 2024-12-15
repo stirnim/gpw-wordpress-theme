@@ -1,5 +1,19 @@
 # Grand Prix Winterthur Wordpress Theme
 
+## Installation
+
+This WordPress theme requires the following WordPress plugins:
+
+- [GenerateBlocks](https://wordpress.org/plugins/generateblocks/)
+- [Masonry Image Gallery (MGB)](https://wordpress.org/plugins/mgb-masonry-image-gallery/)
+- [Polylang](https://wordpress.org/plugins/polylang/)
+- [SVG Support](https://wordpress.org/plugins/svg-support/)
+
+Optional plugins for ease of use:
+
+- [Yoast Duplicate Post](https://wordpress.org/plugins/duplicate-post/)
+
+
 ## User Manual
 
 This manual provides guidance on configuring and customizing the GP Winterthur theme. Follow the instructions below to set up and manage the header, footer, pages, and multilingual support.
