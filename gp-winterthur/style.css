@@ -1318,6 +1318,20 @@ body {
 	font-weight: normal;
 }
 
+/* 404 Styling Fix */
+/* Force the 404 page container(s) to 100% width */
+body.error404.separate-containers .content-area,
+body.error404.separate-containers .inside-article,
+body.error404.separate-containers .site-main {
+    width: 100% !important;
+    margin: 0 auto;
+}
+body.error404 .gb-button-2e0a194b.gb-button-text.button-round {
+    display: inline-block !important;
+	text-decoration: none;
+    width: auto; 
+}
+
 /*VARIUS FIX*/
 .separate-containers .inside-article {
 	padding: 0px;
