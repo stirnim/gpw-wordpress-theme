@@ -115,6 +115,13 @@ Updated: 2024-11-06 10:39:02
 	padding: 50px 70px;
 	box-sizing: border-box;
 	margin-left: 0px !important;
+	max-width: 1440px !important;
+}
+
+.wp-block-cover.full-link {
+	text-align: center;
+	width: 310px;
+	height: 465px;
 }
 
 /* Table Styling */
