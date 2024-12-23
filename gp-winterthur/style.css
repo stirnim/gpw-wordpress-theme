@@ -782,6 +782,14 @@ a:active {
 	color: #A6B1F1;
 }
 
+p:has(+ ul) {
+	margin-bottom: 0;
+}
+
+p:has(+ ol) {
+	margin-bottom: 0;
+}
+
 body {
 	font-family: 'ABCFavorit', Tahoma, Verdana, Arial;
 	font-weight: normal;
