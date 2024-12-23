@@ -13,6 +13,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 </div>
 
+<div class="push grid-container container">
+    <div class="inside-article">
+        <div class="text-wide"></div>
+    </div>
+</div>
+
 <?php
 /**
  * generate_before_footer hook.
@@ -134,6 +140,7 @@ if (has_nav_menu('footer-menu-right')) {
         </div>
     </div>
 </footer>
+
 </div>
 
 <?php
@@ -146,6 +153,8 @@ do_action( 'generate_after_footer' );
 
 wp_footer();
 ?>
+
+</div><!-- .page-wrapper -->
 
 </body>
 </html>

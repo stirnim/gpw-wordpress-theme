@@ -29,6 +29,51 @@ Updated: 2024-11-06 10:39:02
 	font-display: swap;
 }
 
+/* Make Page 100% height */
+
+html,
+body {
+    height: 100%;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container.grid-container {
+    width: 100%;
+}
+
+.site-footer.grid-container {
+    width: 100%;
+}
+
+.push {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.push .inside-article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.push .inside-article .text-wide {
+    flex: 1;
+	padding: 0 !important;
+}
+
+.site-footer {
+    flex-shrink: 0;
+}
+
 /* FOOTER CSS */
 .site-footer .footer-widgets-container .inside-footer-widgets {
 	padding-left: 10px;
