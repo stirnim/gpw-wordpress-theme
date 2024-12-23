@@ -773,6 +773,15 @@ h5 strong {
 	line-height: 105%;
 }
 
+a {
+	color: #D3FFB4;
+}
+
+a:hover,
+a:active {
+	color: #A6B1F1;
+}
+
 body {
 	font-family: 'ABCFavorit', Tahoma, Verdana, Arial;
 	font-weight: normal;
@@ -1177,6 +1186,12 @@ body {
 	min-width: 180px;
 	max-width: 100%;
 	margin: 20px auto;
+}
+
+.callout-action ul {
+	text-align: left;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 
 .callout-action .button-round {
