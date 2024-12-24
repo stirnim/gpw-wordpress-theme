@@ -375,19 +375,19 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header
         'type'        => 'text',
     ));
 	
-// Add footer button link setting
-$wp_customize->add_setting('footer_button_link', array(
-    'default'           => '#', // Default button link
-    'transport'         => 'refresh',
-    'sanitize_callback' => 'esc_url_raw', // Sanitize the input as a URL
-));
+    // Add footer button link setting
+    $wp_customize->add_setting('footer_button_link', array(
+        'default'           => '#', // Default button link
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_url_raw', // Sanitize the input as a URL
+    ));
 
-$wp_customize->add_control('footer_button_link', array(
-    'label'       => __('Footer Button Link', 'gp-winterthur'),
-    'description' => __('Set the URL for the newsletter button.', 'gp-winterthur'),
-    'section'     => 'footer_section',
-    'type'        => 'url',
-));	
+    $wp_customize->add_control('footer_button_link', array(
+        'label'       => __('Footer Button Link', 'gp-winterthur'),
+        'description' => __('Set the URL for the newsletter button.', 'gp-winterthur'),
+        'section'     => 'footer_section',
+        'type'        => 'url',
+    ));	
 
     // Add footer gradient color settings (for 6 stops in total)
     $wp_customize->add_setting('footer_color_1', array(
@@ -584,13 +584,19 @@ function gp_winterthur_register_strings() {
         // Register "Unsere Sponsoren" for translation
         pll_register_string('Footer Sponsors Heading', 'Unsere Sponsoren', 'Footer');
 		
-		 // Register "Newsletter Anmeldung" for translation
+		// Register "Newsletter Anmeldung" for translation
         pll_register_string(
             'Footer Button Text', // Unique identifier
             get_theme_mod('footer_button_text', __('Newsletter Anmeldung', 'gp-winterthur')), // Default value
             'Footer' // Group name
         );
 		
+        //Register Newsletter Link for translation
+        pll_register_string(
+            'Footer Button Link',                          // Unique identifier
+            get_theme_mod('footer_button_link', '#'),      // The default link from the Customizer
+            'Footer'                                       // Group name in Polylang
+        );
     }
 }
 add_action('init', 'gp_winterthur_register_strings');

@@ -117,7 +117,7 @@ if (has_nav_menu('footer-menu-right')) {
 					
                 </div>
                 <div class="footer-right">
-                    <a href="<?php echo esc_url(get_theme_mod('footer_button_link', '#')); ?>">
+                    <a href="<?php echo esc_url(pll__( get_theme_mod('footer_button_link', '#'))); ?>">
                         <button class="button-round"><?php echo esc_html(pll__(get_theme_mod('footer_button_text', __('Newsletter Anmeldung', 'gp-winterthur')))); ?></button>
                     </a>
                 </div>
