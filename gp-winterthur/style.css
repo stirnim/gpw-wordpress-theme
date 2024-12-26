@@ -422,14 +422,14 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 	}
 
 	.column-one {
-		padding: 10px 0;
+		padding: 10px 0 !important;
 		flex: 1 0 100%;
 		justify-content: flex-start;
 		width: 100% !important;
 	}
 
 	.column-two {
-		padding: 10px 0;
+		padding: 10px 0 !important;
 		flex: 1 0 100%;
 		justify-content: flex-start;
 		width: 100% !important;
@@ -1316,7 +1316,7 @@ body {
 
 .text-columns h3,
 .text-wide h3 {
-	margin-bottom: 3px;
+	margin-bottom: 5px;
 	margin-top: 10px
 }
 
