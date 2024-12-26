@@ -1428,6 +1428,16 @@ body {
 	font-weight: normal;
 }
 
+/* Prevent line breaks in the first column for tables with .table-col1-nowrap */
+.table-col1-nowrap table td:nth-child(1) {
+    white-space: nowrap;
+}
+
+/* Prevent line breaks in the second column for tables with .table-col2-nowrap */
+.table-col2-nowrap table td:nth-child(2) {
+    white-space: nowrap;
+}
+
 /* 404 Styling Fix */
 /* Force the 404 page container(s) to 100% width */
 body.error404.separate-containers .content-area,
