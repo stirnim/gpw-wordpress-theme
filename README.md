@@ -6,6 +6,9 @@
 2. Upload the theme folder to your WordPress installation under `wp-content/themes/`.
 3. Activate the theme via `Appearance > Themes`.
 
+This WordPress theme requires the following WordPress themes:
+- [GeneratePress](https://de-ch.wordpress.org/themes/generatepress/)
+
 This WordPress theme requires the following WordPress plugins:
 
 - [GenerateBlocks](https://wordpress.org/plugins/generateblocks/)
@@ -51,7 +54,10 @@ Specific Customizations:
    - Footer Center Right
    - Footer Menu
 
-2. **Footer Left Column Text**  
+2. **Footer Sponsor Logos**  
+   Update using `Appearance > Widgets` in the **Footer Sponsors** area.
+
+3. **Footer Left Column Text**  
    Update using `Appearance > Widgets` in the **Footer Left Column** area.
 
 
@@ -116,12 +122,6 @@ Below is an overview of the theme's file structure and its purpose.
 
 ##### Directories
 
-- **`inc/`**
-  - Contains modular PHP files to organize and structure the theme functionality:
-  - **`structure/`**
-    - Contains files for structural elements of the theme.
-    - **`header.php`**: Defines the layout and functionality of the header, including the navigation menu and logo.
-
 - **`patterns/`**
   - Contains Gutenberg block patterns as JSON files for reusable layouts
 
@@ -145,29 +145,10 @@ Below is an overview of the theme's file structure and its purpose.
 
 #### Create Patterns
 
-Use the following pattern template when creating a new pattern
-
-```
-{
-  "__file": "wp_block",
-  "title": "GPW Pattern Name",
-  "content":"<!-- PATTERN CONTENT  -->",
-  "syncStatus": "unsynced"
-}
-```
-
-Open `python3` and type `import json`, then use the following code to create a python dictionary from this pattern:
-```
-rawpattern = '''<PASTE RAW PATTERN>'''
-pattern = json.loads(rawpattern)
-```
-
-Now, copy any Gutenberg Block Pattern code you would like to have as a pattern and print the pattern in a pretty-printed JSON:
-```
-data = '''<PASTE GUTENBERG BLOCK>'''
-pattern["content"] = data
-print(json.dumps(pattern, separators=(',', ':'),indent=4))
-```
-
-Store the printed output in a new pattern file e.g. `gpw-pattern-name.json` and move it to the pattern directory.
+1. Edit a page and select a number of blocks you would like to store as a pattern
+2. Click on the three dots and select "Create Pattern"
+3. Click again on the three dots and select "Manage Patterns"
+4. Select the created pattern and on then select the action "Export as JSON"
+5. Move the JSON file to the pattern directory
+6. Remove the pattern in the "Manage Patterns" section
 
