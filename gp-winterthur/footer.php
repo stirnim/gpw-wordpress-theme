@@ -36,21 +36,25 @@ do_action( 'generate_before_footer' );
         <h1><?php echo esc_html(pll__('Unsere Sponsoren', 'gp-winterthur')); ?></h1>
     </div>
 <div class="footer-box">
-    <div class="footer-box">
-        <a href="https://ostschweiz.migros.ch/">
-            <img width="196" height="36" loading="lazy" class="footer-image" src="<?php echo esc_url(get_theme_mod('footer_logo_migros', get_stylesheet_directory_uri() . '/images/migros_lime.svg')); ?>" alt="Migros">
-        </a>
-    </div>
-    <div class="footer-box">
-        <a href="https://www.newbalance.ch/">
-            <img width="170" height="94" loading="lazy" class="footer-image" src="<?php echo esc_url(get_theme_mod('footer_logo_newbalance', get_stylesheet_directory_uri() . '/images/nb_lime.svg')); ?>" alt="New Balance">
-        </a>
-    </div>
-    <div class="footer-box">
-        <a href="https://www.swica.ch/">
-            <img width="196" height="67" loading="lazy" class="footer-image" src="<?php echo esc_url(get_theme_mod('footer_logo_swica', get_stylesheet_directory_uri() . '/images/swica_lime.svg')); ?>" alt="SWICA">
-        </a>
-    </div>
+    <?php if (is_active_sidebar('footer-sponsors')) : ?>
+        <?php dynamic_sidebar('footer-sponsors'); ?>
+    <?php else : ?>
+        <div class="footer-box">
+            <a href="https://ostschweiz.migros.ch/">
+                <img width="196" height="36" loading="lazy" class="footer-image" src="<?php echo esc_url(get_theme_mod('footer_logo_migros', get_stylesheet_directory_uri() . '/images/migros_lime.svg')); ?>" alt="Migros">
+            </a>
+        </div>
+        <div class="footer-box">
+            <a href="https://www.newbalance.ch/">
+                <img width="170" height="94" loading="lazy" class="footer-image" src="<?php echo esc_url(get_theme_mod('footer_logo_newbalance', get_stylesheet_directory_uri() . '/images/nb_lime.svg')); ?>" alt="New Balance">
+            </a>
+        </div>
+        <div class="footer-box">
+            <a href="https://www.swica.ch/">
+                <img width="196" height="67" loading="lazy" class="footer-image" src="<?php echo esc_url(get_theme_mod('footer_logo_swica', get_stylesheet_directory_uri() . '/images/swica_lime.svg')); ?>" alt="SWICA">
+            </a>
+        </div>
+    <?php endif; ?>
 </div>
 
     <!-- Spacer (if needed) -->

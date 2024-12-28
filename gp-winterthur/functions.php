@@ -644,6 +644,16 @@ function gp_winterthur_register_widget_areas() {
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ));
+
+    register_sidebar(array(
+        'name'          => __('Footer Sponsors', 'gp-winterthur'),
+        'id'            => 'footer-sponsors',
+        'description'   => __('Add widgets here for the footer sponsors.', 'gp-winterthur'),
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
 }
 add_action('widgets_init', 'gp_winterthur_register_widget_areas');
 
