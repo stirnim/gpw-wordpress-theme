@@ -90,18 +90,6 @@ class Header_Mobile_Menu_Walker extends Walker_Nav_Menu {
     }
 }
 
-
-/* SETUP GUTENBERG BLOCK EDITOR STYLES */
-function gp_winterthur_setup_theme_support() {
-    // Add support for editor styles
-    add_theme_support( 'editor-styles' );
-
-    // Specify the path to the editor stylesheet
-    add_editor_style( 'css/editor-style.css' );
-}
-add_action( 'after_setup_theme', 'gp_winterthur_setup_theme_support' );
-
-
 /* FOOTER MENU */
 function register_footer_menu() {
     register_nav_menu('footer-menu', __( 'Footer Menu' ));
@@ -166,6 +154,17 @@ class Footer_Menu_Walker extends Walker_Nav_Menu {
 }
 
 
+/* SETUP GUTENBERG BLOCK EDITOR STYLES */
+function gp_winterthur_setup_theme_support() {
+    // Add support for editor styles
+    add_theme_support( 'editor-styles' );
+
+    // Specify the path to the editor stylesheet
+    add_editor_style( 'css/editor-style.css' );
+}
+add_action( 'after_setup_theme', 'gp_winterthur_setup_theme_support' );
+
+
 /* GUTENBERG CSS */
 function gp_winterthur_customize_register($wp_customize) {
     // Add a new panel for "GP Winterthur Styling"
@@ -187,105 +186,105 @@ function gp_winterthur_customize_register($wp_customize) {
         'panel'      => 'gp_winterthur_styling',
         'priority'   => 20,
     ));
-	
-// Menu Links Background Color
-$wp_customize->add_setting('menu_link_bg_color', array(
-    'default'           => '#004B50',
-    'transport'         => 'refresh',
-    'sanitize_callback' => 'sanitize_hex_color',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'menu_link_bg_color', array(
-    'label'    => __('Menu Link Background Color', 'gp-winterthur'),
-    'section'  => 'header_section', // Add to header_section
-)));
+        
+    // Menu Links Background Color
+    $wp_customize->add_setting('menu_link_bg_color', array(
+        'default'           => '#004B50',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'menu_link_bg_color', array(
+        'label'    => __('Menu Link Background Color', 'gp-winterthur'),
+        'section'  => 'header_section', // Add to header_section
+    )));
 
-// Menu Links Text Color
-$wp_customize->add_setting('menu_link_text_color', array(
-    'default'           => '#D3FFB4',
-    'transport'         => 'refresh',
-    'sanitize_callback' => 'sanitize_hex_color',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'menu_link_text_color', array(
-    'label'    => __('Menu Link Text Color', 'gp-winterthur'),
-    'section'  => 'header_section', // Add to header_section
-)));
+    // Menu Links Text Color
+    $wp_customize->add_setting('menu_link_text_color', array(
+        'default'           => '#D3FFB4',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'menu_link_text_color', array(
+        'label'    => __('Menu Link Text Color', 'gp-winterthur'),
+        'section'  => 'header_section', // Add to header_section
+    )));
 
-	// Menu Links Hover Background Color
-$wp_customize->add_setting('menu_link_hover_bg_color', array(
-    'default'           => '#A6B1F1',
-    'transport'         => 'refresh',
-    'sanitize_callback' => 'sanitize_hex_color',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'menu_link_hover_bg_color', array(
-    'label'    => __('Menu Link Hover Background Color', 'gp-winterthur'),
-    'section'  => 'header_section', // Add to header_section
-)));
+        // Menu Links Hover Background Color
+    $wp_customize->add_setting('menu_link_hover_bg_color', array(
+        'default'           => '#A6B1F1',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'menu_link_hover_bg_color', array(
+        'label'    => __('Menu Link Hover Background Color', 'gp-winterthur'),
+        'section'  => 'header_section', // Add to header_section
+    )));
 
-// Menu Links Hover Text Color
-$wp_customize->add_setting('menu_link_hover_text_color', array(
-    'default'           => '#004B50',
-    'transport'         => 'refresh',
-    'sanitize_callback' => 'sanitize_hex_color',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'menu_link_hover_text_color', array(
-    'label'    => __('Menu Link Hover Text Color', 'gp-winterthur'),
-    'section'  => 'header_section', // Add to header_section
-)));
-	
-// Add header gradient color settings (for 6 stops in total)
-$wp_customize->add_setting('header_color_1', array(
-    'default'     => 'rgba(211, 255, 180, 0.15)',
-    'transport'   => 'refresh',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_1', array(
-    'label'   => __('Header Gradient Color 1', 'gp-winterthur'),
-    'section' => 'header_section',
-)));
+    // Menu Links Hover Text Color
+    $wp_customize->add_setting('menu_link_hover_text_color', array(
+        'default'           => '#004B50',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'menu_link_hover_text_color', array(
+        'label'    => __('Menu Link Hover Text Color', 'gp-winterthur'),
+        'section'  => 'header_section', // Add to header_section
+    )));
+        
+    // Add header gradient color settings (for 6 stops in total)
+    $wp_customize->add_setting('header_color_1', array(
+        'default'     => 'rgba(211, 255, 180, 0.15)',
+        'transport'   => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_1', array(
+        'label'   => __('Header Gradient Color 1', 'gp-winterthur'),
+        'section' => 'header_section',
+    )));
 
-$wp_customize->add_setting('header_color_2', array(
-    'default'     => 'rgba(211, 255, 180, 0.3)',
-    'transport'   => 'refresh',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_2', array(
-    'label'   => __('Header Gradient Color 2', 'gp-winterthur'),
-    'section' => 'header_section',
-)));
+    $wp_customize->add_setting('header_color_2', array(
+        'default'     => 'rgba(211, 255, 180, 0.3)',
+        'transport'   => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_2', array(
+        'label'   => __('Header Gradient Color 2', 'gp-winterthur'),
+        'section' => 'header_section',
+    )));
 
-$wp_customize->add_setting('header_color_3', array(
-    'default'     => 'rgba(211, 255, 180, 0.5)',
-    'transport'   => 'refresh',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_3', array(
-    'label'   => __('Header Gradient Color 3', 'gp-winterthur'),
-    'section' => 'header_section',
-)));
+    $wp_customize->add_setting('header_color_3', array(
+        'default'     => 'rgba(211, 255, 180, 0.5)',
+        'transport'   => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_3', array(
+        'label'   => __('Header Gradient Color 3', 'gp-winterthur'),
+        'section' => 'header_section',
+    )));
 
-$wp_customize->add_setting('header_color_4', array(
-    'default'     => 'rgba(211, 255, 180, 0.7)',
-    'transport'   => 'refresh',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_4', array(
-    'label'   => __('Header Gradient Color 4', 'gp-winterthur'),
-    'section' => 'header_section',
-)));
+    $wp_customize->add_setting('header_color_4', array(
+        'default'     => 'rgba(211, 255, 180, 0.7)',
+        'transport'   => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_4', array(
+        'label'   => __('Header Gradient Color 4', 'gp-winterthur'),
+        'section' => 'header_section',
+    )));
 
-$wp_customize->add_setting('header_color_5', array(
-    'default'     => '#D3FFB4',
-    'transport'   => 'refresh',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_5', array(
-    'label'   => __('Header Gradient Color 5', 'gp-winterthur'),
-    'section' => 'header_section',
-)));
+    $wp_customize->add_setting('header_color_5', array(
+        'default'     => '#D3FFB4',
+        'transport'   => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_5', array(
+        'label'   => __('Header Gradient Color 5', 'gp-winterthur'),
+        'section' => 'header_section',
+    )));
 
-$wp_customize->add_setting('header_color_6', array(
-    'default'     => 'transparent',
-    'transport'   => 'refresh',
-));
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_6', array(
-    'label'   => __('Header Gradient Color 6', 'gp-winterthur'),
-    'section' => 'header_section',
-)));
+    $wp_customize->add_setting('header_color_6', array(
+        'default'     => 'transparent',
+        'transport'   => 'refresh',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_color_6', array(
+        'label'   => __('Header Gradient Color 6', 'gp-winterthur'),
+        'section' => 'header_section',
+    )));
 	
 	
     // Add footer logo settings with default values
@@ -495,30 +494,29 @@ function gp_winterthur_customizer_css() {
     ?>
     <style type="text/css">
 		
-/* MAIN NAVIGATION */		
-.main-navigation .main-nav ul li a {
-    background-color: <?php echo get_theme_mod('menu_link_bg_color', '#004B50'); ?>;
-    color: <?php echo get_theme_mod('menu_link_text_color', '#D3FFB4'); ?> !important;
-}
-		
-.main-navigation .main-nav ul li a:hover, .main-navigation .main-nav ul ul li a:hover {
-    background-color: <?php echo get_theme_mod('menu_link_hover_bg_color', '#A6B1F1'); ?> !important;
-    color: <?php echo get_theme_mod('menu_link_hover_text_color', '#004B50'); ?> !important;
-}
+    /* MAIN NAVIGATION */		
+    .main-navigation .main-nav ul li a {
+        background-color: <?php echo get_theme_mod('menu_link_bg_color', '#004B50'); ?>;
+        color: <?php echo get_theme_mod('menu_link_text_color', '#D3FFB4'); ?> !important;
+    }
+            
+    .main-navigation .main-nav ul li a:hover, .main-navigation .main-nav ul ul li a:hover {
+        background-color: <?php echo get_theme_mod('menu_link_hover_bg_color', '#A6B1F1'); ?> !important;
+        color: <?php echo get_theme_mod('menu_link_hover_text_color', '#004B50'); ?> !important;
+    }
 
-		
-        /* Footer Gradient Styles */
-         body .footer-color-transition {
-            background: linear-gradient(180deg,
-                <?php echo get_theme_mod('footer_color_1', '#004B50'); ?> 25%,
-                <?php echo get_theme_mod('footer_color_2', '#185A68'); ?> 33%,
-                <?php echo get_theme_mod('footer_color_3', '#31697F'); ?> 38%,
-                <?php echo get_theme_mod('footer_color_4', '#698CB6'); ?> 47%,
-                <?php echo get_theme_mod('footer_color_5', '#889FD4'); ?> 55%,
-                <?php echo get_theme_mod('footer_color_6', '#A6B1F1'); ?> 69%,
-                <?php echo get_theme_mod('footer_color_6', '#A6B1F1'); ?> 100%);
-            padding: 80px 50px 0 50px;
-        }
+    /* Footer Gradient Styles */
+    body .footer-color-transition {
+    background: linear-gradient(180deg,
+        <?php echo get_theme_mod('footer_color_1', '#004B50'); ?> 25%,
+        <?php echo get_theme_mod('footer_color_2', '#185A68'); ?> 33%,
+        <?php echo get_theme_mod('footer_color_3', '#31697F'); ?> 38%,
+        <?php echo get_theme_mod('footer_color_4', '#698CB6'); ?> 47%,
+        <?php echo get_theme_mod('footer_color_5', '#889FD4'); ?> 55%,
+        <?php echo get_theme_mod('footer_color_6', '#A6B1F1'); ?> 69%,
+        <?php echo get_theme_mod('footer_color_6', '#A6B1F1'); ?> 100%);
+    padding: 80px 50px 0 50px;
+    }
 		
 	/* Header Gradient Hover */
 	header.submenu-open::after {
@@ -529,31 +527,30 @@ function gp_winterthur_customizer_css() {
         <?php echo get_theme_mod('header_color_2', 'rgba(211, 255, 180, 0.3)'); ?> 30%,
         <?php echo get_theme_mod('header_color_3', 'rgba(211, 255, 180, 0.5)'); ?> 50%,
         <?php echo get_theme_mod('header_color_4', 'rgba(211, 255, 180, 0.7)'); ?> 70%,
-        <?php echo get_theme_mod('header_color_5', '#D3FFB4'); ?> 100%
-    );
-}
+        <?php echo get_theme_mod('header_color_5', '#D3FFB4'); ?> 100%);
+    }
 
-        /* Footer Heading Color */
-        body .footer-box h1 {
-            color: <?php echo get_theme_mod('footer_heading_color', '#D3FFB4'); ?>;
-        }
+    /* Footer Heading Color */
+    body .footer-box h1 {
+        color: <?php echo get_theme_mod('footer_heading_color', '#D3FFB4'); ?>;
+    }
 
-        /* Footer Link Color */
-        body .footer-color-transition a {
-            color: <?php echo get_theme_mod('footer_link_color', '#004B50'); ?>;
-            text-decoration: none;
-        }
+    /* Footer Link Color */
+    body .footer-color-transition a {
+        color: <?php echo get_theme_mod('footer_link_color', '#004B50'); ?>;
+        text-decoration: none;
+    }
 
-        /* Footer Link Hover Color */
-        body .footer-color-transition a:hover,
-        body .footer-color-transition a:active {
-            color: <?php echo get_theme_mod('footer_link_hover_color', '#D3FFB4'); ?>;
-        }
+    /* Footer Link Hover Color */
+    body .footer-color-transition a:hover,
+    body .footer-color-transition a:active {
+        color: <?php echo get_theme_mod('footer_link_hover_color', '#D3FFB4'); ?>;
+    }
 
-        /* Footer Summary Text Color */
-        body .footer-widgets summary {
-            color: <?php echo get_theme_mod('footer_summary_text_color', '#004B50'); ?>;
-        }
+    /* Footer Summary Text Color */
+    body .footer-widgets summary {
+        color: <?php echo get_theme_mod('footer_summary_text_color', '#004B50'); ?>;
+    }
     </style>
     <?php
 }
