@@ -130,6 +130,11 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 	margin: 0;
 }
 
+.footer-links a:hover,
+.footer-links a:active {
+	color: #A6B1F1;
+}
+
 .footer-color-transition a:hover,
 .footer-color-transition a:active {
 	color: #D3FFB4;
