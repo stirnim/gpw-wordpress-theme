@@ -1,0 +1,6 @@
+{
+  "__file": "wp_block",
+  "title": "GPW Table",
+  "content": "<!-- wp:table {\"hasFixedLayout\":false,\"className\":\"transparent-table\"} -->\n<figure class=\"wp-block-table transparent-table\"><table><thead><tr><th></th><th>ab 1.1.25</th><th>ab 1.3.25</th><th>ab 1.5.25</th></tr></thead><tbody><tr><td>10-Meilen-Lauf</td><td>CHF 40</td><td>CHF 45</td><td>CHF 55</td></tr><tr><td>5-Meilen-Lauf</td><td>CHF 35</td><td>CHF 38</td><td>CHF 45</td></tr><tr><td>Jugendlauf (Jahrgang 2010)</td><td>CHF 18</td><td>CHF 18</td><td>CHF 18</td></tr><tr><td>Jugendlauf (Jahrgang 2011 &amp; jünger)</td><td>gratis</td><td>gratis</td><td>gratis</td></tr><tr><td>Kinderlauf</td><td>gratis</td><td>gratis</td><td>gratis</td></tr></tbody></table></figure>\n<!-- /wp:table -->",
+  "syncStatus": "unsynced"
+}
