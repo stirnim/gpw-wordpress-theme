@@ -90,6 +90,41 @@ class Header_Mobile_Menu_Walker extends Walker_Nav_Menu {
     }
 }
 
+/* MOBILE HEADER FOOTER */
+/**
+ * Re-inject the snippet that was added in parent inc/structure/header.php
+ * just after generate_after_header_content.
+ */
+add_action( 'generate_after_header_content', 'child_add_language_and_mobile_footer', 99 );
+function child_add_language_and_mobile_footer() {
+    ?>
+    <div class="language-dropdown">
+        <?php
+        pll_the_languages( array(
+            'dropdown'         => 1,
+            'display_names_as' => 'slug'
+        ) );
+        ?>
+    </div>
+    <div class="mobile-footer">
+        <!-- Social Media Icons -->
+        <div class="mobile-social-media">
+            <a href="<?php echo esc_url( get_theme_mod( 'footer_facebook_link', 'https://www.facebook.com/wintimarathon' ) ); ?>">
+                <img src="<?php echo esc_url( get_theme_mod( 'footer_facebook_icon', get_stylesheet_directory_uri() . '/images/facebook_lime.svg' ) ); ?>" alt="Facebook">
+            </a>
+            <a href="<?php echo esc_url( get_theme_mod( 'footer_instagram_link', 'https://www.instagram.com/wintimarathon/' ) ); ?>">
+                <img src="<?php echo esc_url( get_theme_mod( 'footer_instagram_icon', get_stylesheet_directory_uri() . '/images/instagram_lime.svg' ) ); ?>" alt="Instagram">
+            </a>
+        </div>
+        <!-- Footer Links -->
+        <div class="footer-links header-mobile-menu">
+            <?php display_header_mobile_menu(); ?>
+        </div>
+    </div>
+    <?php
+}
+
+
 /* FOOTER MENU */
 function register_footer_menu() {
     register_nav_menu('footer-menu', __( 'Footer Menu' ));
