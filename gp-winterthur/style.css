@@ -1019,8 +1019,9 @@ body {
 @media (max-width: 810px) {
 	.navbar-top {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		box-sizing: border-box;
+		width: 100%;
 	}
 
 	.nav-float-right #site-navigation {
