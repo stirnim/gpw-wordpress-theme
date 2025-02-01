@@ -16,6 +16,23 @@ add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
 
 // END ENQUEUE PARENT ACTION
 
+/**
+ * Insert Google Analytics code right after the opening <body> tag.
+ */
+function add_google_analytics_code() {
+    ?>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBTC09X2NH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NBTC09X2NH');
+    </script>
+    <?php
+}
+add_action( 'wp_body_open', 'add_google_analytics_code' );
+
 /* MOBILE HEADER MENU */
 function register_header_mobile_menu() {
     register_nav_menu('header-mobile-menu', __('Header Mobile Menu'));
