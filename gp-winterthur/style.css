@@ -1468,6 +1468,7 @@ body.error404 .gb-button-2e0a194b.gb-button-text.button-round {
 	text-align: center;
 	width: 310px;
 	height: 465px;
+	padding: 1em 0 1em 0;
 }
 
 @media (max-width: 767px) {
