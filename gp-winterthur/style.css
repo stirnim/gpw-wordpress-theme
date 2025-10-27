@@ -284,6 +284,7 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 .footer-center-right {
 	flex: 1;
 	text-align: left;
+        white-space: nowrap;
 }
 
 .footer-right {
