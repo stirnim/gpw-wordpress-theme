@@ -491,7 +491,7 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 }
 
 .footer-box h1 {
-	color: #D3FFB4;
+	color: #ffffff !important;
 }
 
 .footer-box {
