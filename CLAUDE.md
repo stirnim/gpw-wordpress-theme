@@ -57,7 +57,7 @@ Content is constrained to 1440px max-width, but backgrounds extend to full viewp
 2. Add the class to the `::before` pseudo-element rule in the "FULL-WIDTH BACKGROUNDS" section at the end of `style.css`
 
 **Currently supported blocks:**
-`.text-wide`, `.text-columns`, `.callout-action`, `.header-color-transition`, `.header-wide`, `.image-columns`, `.gallery-wide`, `..wp-block-embed-vimeo`, `.footer-color-transition`
+`.text-wide`, `.text-columns`, `.callout-action`, `.header-color-transition`, `.header-wide`, `.image-columns`, `.image-wide`, `.gallery-wide`, `..wp-block-embed-vimeo`, `.footer-color-transition`
 
 **Excluded:** `.color-transition` (uses transparency to blend with teaser image, which is already full-width)
 

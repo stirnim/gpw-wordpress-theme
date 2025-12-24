@@ -169,6 +169,7 @@ The theme uses a **pseudo-element system** to extend content block backgrounds t
 - `.header-color-transition`
 - `.header-wide`
 - `.image-columns`
+- `.image-wide`
 - `.gallery-wide`
 - `..wp-block-embed-vimeo`
 - `.footer-color-transition`

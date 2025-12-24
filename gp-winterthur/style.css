@@ -512,6 +512,11 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 	margin-left: 0px !important;
 }
 
+.image-wide {
+	position: relative;
+	background: #004B50;
+}
+
 .header-wide {
 	position: relative;
 	display: flex;
@@ -1596,6 +1601,7 @@ body {
 .header-color-transition::before,
 .header-wide::before,
 .image-columns::before,
+.image-wide::before,
 .gallery-wide::before,
 .wp-block-embed-vimeo::before {
 	content: '';
