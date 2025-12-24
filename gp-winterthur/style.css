@@ -1490,6 +1490,10 @@ h1 {
 
 
 /* GALLERY */
+.wp-block-embed-vimeo {
+	position: relative;
+	background: #004B50;
+}
 .gallery-wide {
 	position: relative;
 	padding: 50px 200px;
@@ -1592,7 +1596,8 @@ body {
 .header-color-transition::before,
 .header-wide::before,
 .image-columns::before,
-.gallery-wide::before {
+.gallery-wide::before,
+.wp-block-embed-vimeo::before {
 	content: '';
 	position: absolute;
 	top: 0;
