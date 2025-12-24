@@ -170,8 +170,9 @@ The theme uses a **pseudo-element system** to extend content block backgrounds t
 - `.header-wide`
 - `.image-columns`
 - `.gallery-wide`
-- `.color-transition`
 - `.footer-color-transition`
+
+**Note:** `.color-transition` is excluded because its gradient uses transparency to blend with the teaser image behind it. Since the teaser image is full-width, no pseudo-element is needed.
 
 **Adding a new content block:**
 

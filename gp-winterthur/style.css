@@ -527,10 +527,11 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 }
 
 .color-transition {
-	position: relative;
 	height: 250px;
 	background: linear-gradient(180deg, rgba(0, 75, 80, 0) 5%, rgba(0, 75, 80, 0.67) 43%, rgba(0, 75, 80, 0.84) 56%, rgba(0, 75, 80, 0.93) 67%, rgba(0, 75, 80, 0.98) 73%, rgba(0, 75, 80, 1) 81%, #004B50 100%);
 	margin-top: 95vh;
+	width: 100vw;
+	margin-left: calc(-50vw + 50%);
 }
 
 .teaser-image {
@@ -1591,8 +1592,7 @@ body {
 .header-color-transition::before,
 .header-wide::before,
 .image-columns::before,
-.gallery-wide::before,
-.color-transition::before {
+.gallery-wide::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1657,7 +1657,7 @@ header.submenu-open::after {
 	max-width: none;
 }
 
-/* Keep logo constrained within teaser */
+/* Keep logo constrained within teaser (90% of original 1440px = 1296px) */
 .teaser-image .logo {
-	max-width: 1440px;
+	max-width: 1296px;
 }
