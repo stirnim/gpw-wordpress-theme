@@ -152,3 +152,51 @@ Below is an overview of the theme's file structure and its purpose.
 5. Move the JSON file to the pattern directory
 6. Remove the pattern in the "Manage Patterns" section
 
+
+#### Full-Width Backgrounds
+
+The theme uses a **pseudo-element system** to extend content block backgrounds to full viewport width on screens wider than 1440px, while keeping content constrained to 1440px max-width.
+
+**How it works:**
+- Content blocks have `position: relative` and their original padding/max-width
+- A `::before` pseudo-element with `width: 100vw` and `background: inherit` extends the background color to the full viewport
+- The body background is set to `#A6B1F1` (Periwinkle) to match the footer gradient's end color
+
+**Supported content blocks:**
+- `.text-wide`
+- `.text-columns`
+- `.callout-action`
+- `.header-color-transition`
+- `.header-wide`
+- `.image-columns`
+- `.gallery-wide`
+- `.color-transition`
+- `.footer-color-transition`
+
+**Adding a new content block:**
+
+When creating a new content block design, you must add CSS support for full-width backgrounds:
+
+1. Add `position: relative` to the block's base CSS rule
+2. Add the block's class to the pseudo-element rule in the "FULL-WIDTH BACKGROUNDS" section at the end of `style.css`:
+
+```css
+.text-wide::before,
+.text-columns::before,
+/* ... existing blocks ... */
+.your-new-block::before {  /* Add your new block here */
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background: inherit;
+    z-index: -1;
+    pointer-events: none;
+}
+```
+
+**Note:** If a new block is added without this CSS support, its background will not extend to full width on screens wider than 1440px, and the body background color (`#A6B1F1`) will be visible on the sides.
+

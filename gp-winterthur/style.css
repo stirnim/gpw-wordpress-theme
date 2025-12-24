@@ -403,6 +403,7 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 }
 
 .text-columns {
+	position: relative;
 	padding: 50px 200px 50px 70px;
 	color: #D3FFB4;
 	background: #004B50;
@@ -455,6 +456,7 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 
 
 .callout-action {
+	position: relative;
 	padding: 50px 70px;
 	color: #004B50;
 	background-color: #D3FFB4;
@@ -473,6 +475,7 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 }
 
 .footer-color-transition {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 
@@ -501,6 +504,7 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 }
 
 .image-columns {
+	position: relative;
 	padding: 50px 70px;
 	color: #D3FFB4;
 	box-sizing: border-box;
@@ -509,6 +513,7 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 }
 
 .header-wide {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	padding: 50px 70px 0px 200px;
@@ -522,6 +527,7 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 }
 
 .color-transition {
+	position: relative;
 	height: 250px;
 	background: linear-gradient(180deg, rgba(0, 75, 80, 0) 5%, rgba(0, 75, 80, 0.67) 43%, rgba(0, 75, 80, 0.84) 56%, rgba(0, 75, 80, 0.93) 67%, rgba(0, 75, 80, 0.98) 73%, rgba(0, 75, 80, 1) 81%, #004B50 100%);
 	margin-top: 95vh;
@@ -602,6 +608,7 @@ body .site-footer:not(.footer-bar-active) .copyright-bar {
 }
 
 .text-wide {
+	position: relative;
 	width: 100%;
 	padding: 50px 200px;
 	color: #D3FFB4;
@@ -679,7 +686,6 @@ header.submenu-open::after {
 	transform: translateX(-50%);
 	width: 100%;
 	max-width: 1440px;
-	/* Match the content width */
 	height: clamp(300px, 35vw, 400px);
 	background: linear-gradient(to top,
 			transparent 0%,
@@ -1484,7 +1490,9 @@ h1 {
 
 /* GALLERY */
 .gallery-wide {
+	position: relative;
 	padding: 50px 200px;
+	background: #004B50;
 }
 
 @media (max-width: 1380px) and (min-width: 811px) {
@@ -1564,4 +1572,92 @@ h1 {
 .footer-top-row .footer-menu-list {
 	list-style: none;
 	margin: 0px;
+}
+
+/* ==========================================================================
+   FULL-WIDTH BACKGROUNDS
+   Extends block backgrounds to full viewport width while keeping content at 1440px max
+   ========================================================================== */
+
+/* Body background fallback - matches footer gradient end color for seamless transition */
+body {
+	background-color: #A6B1F1;
+}
+
+/* Pseudo-element mixin for full-width backgrounds */
+.text-wide::before,
+.text-columns::before,
+.callout-action::before,
+.header-color-transition::before,
+.header-wide::before,
+.image-columns::before,
+.gallery-wide::before,
+.color-transition::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	background: inherit;
+	z-index: -1;
+	pointer-events: none;
+}
+
+/* Footer full-width background */
+.footer-color-transition::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	background: inherit;
+	z-index: -1;
+	pointer-events: none;
+}
+
+/* Header navigation full-width background when scrolled */
+.site-header {
+	width: 100%;
+}
+
+header.scrolled:not(.submenu-open) .inside-header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	background: linear-gradient(to top, transparent 0%, rgba(166, 177, 241, 0.15) 15%, rgba(166, 177, 241, 0.3) 30%, rgba(166, 177, 241, 0.5) 50%, rgba(166, 177, 241, 0.7) 70%, #A6B1F1 100%);
+	z-index: -1;
+	pointer-events: none;
+}
+
+header.scrolled:not(.submenu-open) .inside-header {
+	position: relative;
+	background: transparent;
+}
+
+/* Submenu open header full-width */
+header.submenu-open::after {
+	left: 0;
+	transform: none;
+	width: 100vw;
+	max-width: none;
+}
+
+/* Teaser image full-width on homepage */
+.teaser-image {
+	left: 0;
+	transform: none;
+	max-width: none;
+}
+
+/* Keep logo constrained within teaser */
+.teaser-image .logo {
+	max-width: 1440px;
 }
